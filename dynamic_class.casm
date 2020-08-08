@@ -1,0 +1,93 @@
+Function: main/0
+    Function: Dog/1
+        Function: __init__/2
+        Constants: None, 1
+        Locals: self, name
+        FreeVars: Dog
+        Globals: name, dogNumber, id
+        BEGIN
+                  LOAD_FAST                      1
+                  LOAD_FAST                      0
+                  STORE_ATTR                     0
+                  LOAD_DEREF                     0
+                  LOAD_ATTR                      1
+                  LOAD_FAST                      0
+                  STORE_ATTR                     2
+                  LOAD_DEREF                     0
+                  DUP_TOP                  
+                  LOAD_ATTR                      1
+                  LOAD_CONST                     1
+                  INPLACE_ADD              
+                  ROT_TWO                  
+                  STORE_ATTR                     1
+                  LOAD_CONST                     0
+                  RETURN_VALUE             
+        END
+        Function: speak/1
+        Constants: None, "Dog number: "
+        Locals: self
+        Globals: print, id
+        BEGIN
+                  LOAD_GLOBAL                    0
+                  LOAD_CONST                     1
+                  LOAD_FAST                      0
+                  LOAD_ATTR                      1
+                  CALL_FUNCTION                  2
+                  POP_TOP                  
+                  LOAD_CONST                     0
+                  RETURN_VALUE             
+        END
+    Constants: 0, code(__init__), code(speak), None
+    Locals: __locals__
+    FreeVars: Dog
+    Globals: __name__, __module__, dogNumber, __init__, speak
+    BEGIN
+              LOAD_FAST                      0
+              STORE_LOCALS             
+              LOAD_NAME                      0
+              STORE_NAME                     1
+              LOAD_CONST                     0
+              STORE_NAME                     2
+              LOAD_CLOSURE                   0
+              BUILD_TUPLE                    1
+              LOAD_CONST                     1
+              MAKE_CLOSURE                   0
+              STORE_NAME                     3
+              LOAD_CONST                     2
+              MAKE_FUNCTION                  0
+              STORE_NAME                     4
+              LOAD_CONST                     3
+              RETURN_VALUE             
+    END
+Constants: None, code(Dog), "Dog", "Mesa", "Sequoia"
+Locals: x, y
+CellVars: Dog
+Globals: speak
+BEGIN
+          LOAD_BUILD_CLASS         
+          LOAD_CLOSURE                   0
+          BUILD_TUPLE                    1
+          LOAD_CONST                     1
+          MAKE_CLOSURE                   0
+          LOAD_CONST                     2
+          CALL_FUNCTION                  2
+          STORE_DEREF                    0
+          LOAD_DEREF                     0
+          LOAD_CONST                     3
+          CALL_FUNCTION                  1
+          STORE_FAST                     0
+          LOAD_DEREF                     0
+          LOAD_CONST                     4
+          CALL_FUNCTION                  1
+          STORE_FAST                     1
+          LOAD_FAST                      0
+          LOAD_ATTR                      0
+          CALL_FUNCTION                  0
+          POP_TOP                  
+          LOAD_FAST                      1
+          LOAD_ATTR                      0
+          CALL_FUNCTION                  0
+          POP_TOP                  
+          LOAD_CONST                     0
+          RETURN_VALUE             
+END

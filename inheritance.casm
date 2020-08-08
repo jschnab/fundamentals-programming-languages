@@ -1,0 +1,97 @@
+Class: Animal
+BEGIN
+    Function: eat/1
+    Constants: None, 1
+    Locals: self
+    Globals: food
+    BEGIN
+              LOAD_FAST                      0
+              LOAD_ATTR                      0
+              LOAD_CONST                     1
+              BINARY_ADD               
+              LOAD_FAST                      0
+              STORE_ATTR                     0
+              LOAD_CONST                     0
+              RETURN_VALUE             
+    END
+    Function: __init__/2
+    Constants: None, 0
+    Locals: self, name
+    Globals: name, food
+    BEGIN
+              LOAD_FAST                      1
+              LOAD_FAST                      0
+              STORE_ATTR                     0
+              LOAD_CONST                     1
+              LOAD_FAST                      0
+              STORE_ATTR                     1
+              LOAD_CONST                     0
+              RETURN_VALUE             
+    END
+    Function: speak/1
+    Constants: None, "is an animal"
+    Locals: self
+    Globals: print, name
+    BEGIN
+              LOAD_GLOBAL                    0
+              LOAD_FAST                      0
+              LOAD_ATTR                      1
+              LOAD_CONST                     1
+              CALL_FUNCTION                  2
+              POP_TOP                  
+              LOAD_CONST                     0
+              RETURN_VALUE             
+    END
+END
+Class: Dog(Animal)
+BEGIN
+    Function: __init__/2
+    Constants: None
+    Locals: self, name
+    FreeVars: __class__
+    Globals: super, __init__
+    BEGIN
+              LOAD_GLOBAL                    0
+              CALL_FUNCTION                  0
+              LOAD_ATTR                      1
+              LOAD_FAST                      1
+              CALL_FUNCTION                  1
+              POP_TOP                  
+              LOAD_CONST                     0
+              RETURN_VALUE             
+    END
+    Function: speak/1
+    Constants: None, "says woof"
+    Locals: self
+    Globals: print, name
+    BEGIN
+              LOAD_GLOBAL                    0
+              LOAD_FAST                      0
+              LOAD_ATTR                      1
+              LOAD_CONST                     1
+              CALL_FUNCTION                  2
+              POP_TOP                  
+              LOAD_CONST                     0
+              RETURN_VALUE             
+    END
+END
+Function: main/0
+Constants: None, "Mesa"
+Locals: mesa
+Globals: Dog, eat, speak
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     1
+          CALL_FUNCTION                  1
+          STORE_FAST                     0
+          LOAD_FAST                      0
+          LOAD_ATTR                      1
+          CALL_FUNCTION                  0
+          POP_TOP                  
+          LOAD_FAST                      0
+          LOAD_ATTR                      2
+          CALL_FUNCTION                  0
+          POP_TOP                  
+          LOAD_CONST                     0
+          RETURN_VALUE             
+END

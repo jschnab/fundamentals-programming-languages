@@ -1,0 +1,93 @@
+Class: Dog
+BEGIN
+    Function: eat/1
+    Constants: None, 1
+    Locals: self
+    Globals: food
+    BEGIN
+              LOAD_FAST                      0
+              LOAD_ATTR                      0
+              LOAD_CONST                     1
+              BINARY_ADD               
+              LOAD_FAST                      0
+              STORE_ATTR                     0
+              LOAD_CONST                     0
+              RETURN_VALUE             
+    END
+    Function: __init__/1
+    Constants: None, 0
+    Locals: self
+    Globals: food
+    BEGIN
+              LOAD_CONST                     1
+              LOAD_FAST                      0
+              STORE_ATTR                     0
+              LOAD_CONST                     0
+              RETURN_VALUE             
+    END
+    Function: speak/1
+    Constants: None, 2, "I am happy", "I am hungry", 0, 1
+    Locals: self
+    Globals: food, print
+    BEGIN
+              LOAD_FAST                      0
+              LOAD_ATTR                      0
+              LOAD_CONST                     1
+              COMPARE_OP                     5
+              POP_JUMP_IF_FALSE        label00
+              LOAD_GLOBAL                    1
+              LOAD_CONST                     2
+              CALL_FUNCTION                  1
+              POP_TOP                  
+              JUMP_FORWARD             label01
+    label00:  LOAD_GLOBAL                    1
+              LOAD_CONST                     3
+              CALL_FUNCTION                  1
+              POP_TOP                  
+    label01:  LOAD_FAST                      0
+              LOAD_ATTR                      0
+              LOAD_CONST                     4
+              COMPARE_OP                     4
+              POP_JUMP_IF_FALSE        label02
+              LOAD_FAST                      0
+              LOAD_ATTR                      0
+              LOAD_CONST                     5
+              BINARY_SUBTRACT          
+              LOAD_FAST                      0
+              STORE_ATTR                     0
+              JUMP_FORWARD             label02
+    label02:  LOAD_CONST                     0
+              RETURN_VALUE             
+    END
+END
+Function: main/0
+Constants: None
+Locals: mesa
+Globals: Dog, eat, speak
+BEGIN
+          LOAD_GLOBAL                    0
+          CALL_FUNCTION                  0
+          STORE_FAST                     0
+          LOAD_FAST                      0
+          LOAD_ATTR                      1
+          CALL_FUNCTION                  0
+          POP_TOP                  
+          LOAD_FAST                      0
+          LOAD_ATTR                      2
+          CALL_FUNCTION                  0
+          POP_TOP                  
+          LOAD_FAST                      0
+          LOAD_ATTR                      1
+          CALL_FUNCTION                  0
+          POP_TOP                  
+          LOAD_FAST                      0
+          LOAD_ATTR                      1
+          CALL_FUNCTION                  0
+          POP_TOP                  
+          LOAD_FAST                      0
+          LOAD_ATTR                      2
+          CALL_FUNCTION                  0
+          POP_TOP                  
+          LOAD_CONST                     0
+          RETURN_VALUE             
+END
